@@ -1,11 +1,13 @@
-const RestaurantCard=()=>{
+import { IMG_URL } from "../utils/constants";
+
+const RestaurantCard=(props)=>{
     return(
         <div className="res-card">
-            <img alt="res-logo" className="res-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ2bSN9usdjMZUx4EBPVaSLXBynD1kqAjJ026ROAmW&s"/>
-            <h3>Meghana Foods</h3>
-            <h4>North Indian</h4>
-            <h4>4 stars</h4>
-            <h4>38 minutes</h4>
+            <img alt="res-logo" className="res-image" src={IMG_URL+props.cloudinaryImageId}/>
+            <h3>{props.name}</h3>
+            <h4>{props.cuisines}</h4>
+            <h4>{props.avgRating}</h4>
+            <h4>{props.deliveryTime}</h4>
         </div>
     )
 }
